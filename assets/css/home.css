@@ -1,0 +1,139 @@
+*{
+   padding: 0;
+   margin: 0;
+}
+:root{
+   --blue: #287bff;
+   --white: #ffff;
+   --grey: #f5f5f5;
+   --black1: #2222;
+   --black2: #999;
+}
+body{
+   width: 100vw;
+   height: 100vh;
+   overflow-x: hidden;
+   font-family: 'Ubuntu', sans-serif;
+
+}
+.container{
+   width: 100%;
+   height: 100%;
+}
+.navigation{
+   position: fixed;
+   background-color: var(--blue);
+   height: 100%;
+   width: 225px;
+   display: block;
+   border-left: 5px solid var(--blue);
+   border-right: 5px solid var(--blue);
+   font-family: 'Ubuntu', sans-serif;
+}  
+.navigation ul{
+   list-style: none;
+   padding: 0px 15px;
+   margin-top: -16px;
+}
+.navigation ul li{
+   margin: 30px 10px;
+}
+
+.navigation .title{
+   font-family: 'Ubuntu', sans-serif;
+   text-decoration: none;
+   color: var(--white);
+   font-size: large;
+   position: absolute;
+   margin: 17px 54px;
+}
+
+.navigation ul li:nth-child(1){
+   margin-top: 98px;
+}
+
+.navigation ul li a{
+   text-decoration: none;
+   color: var(--white);
+   height: 45px;
+   width: 185px;
+   display: flex;
+   align-items: center;
+}
+
+.navigation ul li .labels a{
+   padding: 0px 10px;
+}
+
+.navigation ul li .labels:hover a{
+   background-color: var(--white);
+   color: var(--blue);
+   border-top-left-radius: 23px;
+   border-bottom-left-radius: 23px;
+}
+
+.nav{
+   position: relative;
+   margin-left: 239px;
+   display: flex;
+   justify-content: space-between;
+   padding: 10px;
+   background-color: var(--white);
+   box-shadow: 2px 2px 4px var(--black1);
+}
+.nav .nav_icon{
+   width: 30px;
+   height: 20px;
+}
+.nav .nav_icon div{
+   width: 25px;
+   height: 3px;
+   background-color: rgb(62, 62, 62);
+   margin-bottom: 4px;
+}
+
+
+/* Main */
+
+.main{
+   margin-left: 239px;
+}
+
+.Name{
+   padding: 10px 0px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 40px;
+   box-shadow: 0px 0px 5px var(--black1);
+}
+
+.option #r1, #r2{
+   margin: 20px 0px;
+   margin-left: 10px;
+}
+
+#r2{
+   margin-left: 20px;
+}
+
+.file_up{
+   background-color: var(--black1);
+   height: 20em;
+   display: flex;
+   margin: 4em 10em;
+   flex-direction: column;
+   border: 2px dotted grey;
+   justify-content: center;
+   align-items: center;
+}
+
+.drag{
+   position: absolute;
+}
+.drag span{
+   color: #80808033;
+   font-size: 50px;
+   z-index: -1;
+}
+

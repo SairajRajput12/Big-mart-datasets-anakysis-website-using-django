@@ -1,0 +1,337 @@
+*{
+   padding: 0;
+   margin: 0;
+}
+:root{
+   --blue: #287bff;
+   --white: #ffff;
+   --grey: #f5f5f5;
+   --black1: #2222;
+   --black2: #999;
+}
+body{
+   width: 100vw;
+   height: 100vh;
+   overflow-x: hidden;
+   font-family: 'Ubuntu', sans-serif;
+   scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+   display: none;
+}
+
+.container{
+   width: 100%;
+   height: 100%;
+}
+
+/* Navigation */
+.navigation{
+   position: fixed;
+   background-color: var(--blue);
+   height: 100%;
+   width: 225px;
+   top: 0;
+   display: block;
+   border-left: 5px solid var(--blue);
+   border-right: 5px solid var(--blue);
+   font-family: 'Ubuntu', sans-serif;
+   transition: 0.3s;
+}  
+
+.navigation.active {
+   width: 80px;
+}
+
+.navigation ul{
+   list-style: none;
+   padding: 0px 15px;
+   margin-top: -16px;
+}
+.navigation ul li{
+   margin: 45px 10px;
+   /* transition: 0.2s; */
+}
+
+.navigation.active ul li {
+   margin: 45px 10px;
+}
+
+.navigation .title {
+   font-family: 'Ubuntu', sans-serif;
+   text-decoration: none;
+   color: var(--white);
+   font-size: large;
+   position: fixed;
+   margin: 15px 15px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.navigation .title span{
+   padding: 0px 15px;
+}
+
+.title box-icon{
+   filter: invert(1);
+   display: inline-block;
+   width: 40px;
+   height: 40px;
+   transition: 0.2s;
+}
+.navigation.active .title box-icon{
+   size: 50px;
+   transform: rotate(360deg);
+   margin-left: 8px;
+}
+
+.navigation.active .title span{
+   color: transparent;
+}
+
+.navigation ul li:nth-child(1){
+   margin-top: 98px;
+}
+
+.navigation ul li a{
+   text-decoration: none;
+   color: var(--white);
+   height: 45px;
+   width: 185px;
+   padding: 0px 10px;
+   width: 205px;
+   display: flex;
+   align-items: center;
+   /* transition: 0.2s; */
+}
+
+.navigation.active ul li a span{
+   color: transparent;
+}
+
+.navigation ul li:hover a{
+   background-color: var(--white);
+   color: var(--blue);
+   border-top-left-radius: 23px;
+   border-bottom-left-radius: 23px;
+}
+
+.navigation ul li:nth-child(3) a{
+   background-color: var(--white);
+   color: var(--blue);
+   border-top-left-radius: 23px;
+   border-bottom-left-radius: 23px;
+}
+.navigation ul li:hover a::before,
+.navigation ul li:nth-child(3) a::before{
+   content: '';
+   position: absolute;
+   right: -5px;
+   /* top: 0px; */
+   margin-top: -40%;
+   width: 45px;
+   height: 45px;
+   background-color: var(--blue);
+   border-radius: 50%;
+   box-shadow: 32px 32px 0 15px var(--white);
+   transition: 0.3s;
+}
+
+.navigation ul li:hover a::after,
+.navigation ul li:nth-child(3) a::after{
+   content: '';
+   position: absolute;
+   right: -5px;
+   /* top: 0px; */
+   margin-top: 40%;
+   width: 45px;
+   height: 45px;
+   background-color: var(--blue);
+   border-radius: 50%;
+   box-shadow: 32px -32px 0 15px var(--white);
+   transition: 0.3s;
+}
+
+.navigation.active ul li:hover a::before,
+.navigation.active ul li:nth-child(3) a::before {
+   content: '';
+   position: absolute;
+   right: -5px;
+   /* top: 0px; */
+   margin-top: -112%;
+   width: 45px;
+   height: 45px;
+   background-color: var(--blue);
+   border-radius: 50%;
+   box-shadow: 32px 32px 0 15px var(--white);
+   z-index: -1;
+}
+
+.navigation.active ul li:hover a::after,
+.navigation.active ul li:nth-child(3) a::after {
+   content: '';
+   position: absolute;
+   right: -5px;
+   /* top: 0px; */
+   margin-top: 112%;
+   width: 45px;
+   height: 45px;
+   background-color: var(--blue);
+   border-radius: 50%;
+   box-shadow: 32px -32px 0 15px var(--white);
+   z-index: -1;
+}
+
+
+.navigation ul li a ion-icon{
+   margin-right: 15px;
+   font-size: 25px;
+}
+
+
+/* Main */
+.Main{
+   transition: 0.4s;
+}
+
+.Main.active{
+   margin-left: -76px;
+}
+
+
+.main{
+   display: flex;
+   position: relative;
+   /* top: 30%; */
+   margin-top: 6%;
+   left: 4%;
+   margin-left: 239px;
+   width: 70%;
+   min-height: 300px;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--white);
+   border-radius: 10px;
+   box-shadow: 0 0px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Navbar */
+.nav{
+   position: relative;
+   top: 0;
+   width: 81%;
+   margin-left: 239px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px;
+   background-color: var(--white);
+   /* box-shadow: 2px 2px 4px var(--black1); */
+   box-shadow: 0 7px 25px rgba(0,0,0, 0.08);
+   z-index: 1;
+}
+.nav .nav_icon{
+   /* position: absolute; */
+   font-size: 30px;
+   height: 28px;
+}
+
+
+.user img{
+   width: 35px;
+   position: absolute;
+   border-radius: 20px;
+   right: 45px;
+   top: 5px;
+   transition: 0.2s;
+}
+
+.user img:hover{
+   transform: scale(1.3);
+}
+
+/* Main */
+.main{
+   position: relative;
+   display: flex;
+   margin-left: 239px;
+   min-height: 85vh;
+   width: 60vw;
+   height: 95%;
+   padding: 0;
+   margin: 0;
+   margin-top: 16px;
+   left: 358px;
+   flex-direction: column;
+}
+
+/* *************** form ************** */
+.form{
+   margin-top: 20px;
+}
+
+.Names input,
+.contacts input{
+   height: 30px;
+   width: 239px;
+}
+.Names input:nth-child(2),
+.contacts input:nth-child(2){
+   margin-left: 81px;
+}
+
+input{
+   margin: 10px;
+   transition: 0.2s;
+   padding: 3px;
+   font-size: 15px;
+}
+
+input:hover{
+   box-shadow: 4px 7px 9px 1.5px grey;
+   border: none;
+}
+
+textarea{
+   transition: 0.2s;
+}
+textarea:hover{
+   box-shadow: 4px 7px 9px 1.5px grey;
+   border: none;
+}
+
+
+.button{
+   display: block;
+   margin: 18px 0px 0px 450px;
+   background-color: var(--blue);
+   color: var(--white);
+   padding: 10px 30px;
+   border-radius: 10px;
+   font-size: 15px;
+   border: none;
+   box-shadow: 5px 4px 25px rgba(0, 0, 0, 0.4);
+}
+.button:hover{
+   box-shadow: 4px 3px 25px rgba(0, 0, 0, 0.2);
+   outline: 2px solid var(--blue);
+   offset: 30px;
+}
+
+
+
+
+/* *********** Footer **************** */
+.footer{
+   position: absolute;
+   bottom: 0px;
+   background-color: var(--blue);
+   width: 100%;
+   padding: 5px 300px;
+}
+.footer span{
+   color: var(--white);
+   font-family: 'Consolas';
+}

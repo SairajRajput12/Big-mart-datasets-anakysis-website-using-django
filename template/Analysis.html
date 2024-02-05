@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- {% load static %} -->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Data Analysis</title>
+   <link rel="stylesheet" href="{% static 'css/Analysis.css' %}">
+   <!-- <link rel="stylesheet" href="../static/css/Analysis.css"> -->
+</head>
+
+<body>
+   <div class="container">
+      <div class="navigation">
+         <a class="title" href="#">
+            <box-icon type='solid' name='analyse'></box-icon>
+            <span class="name">MS Analysis</span>
+         </a>
+         <ul>
+            <li>
+               <a href="/preference/">
+                  <ion-icon name="home-outline"></ion-icon>
+                  <span class="name">Home</span>
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <ion-icon name="analytics-outline"></ion-icon>
+                  <span class="name">Analysis</span>
+               </a>
+            </li>
+            <li>
+               <a href="/feedback/">
+                  <ion-icon name="chatbox-outline"></ion-icon>
+                  <span class="name">Feedback</span>
+               </a>
+            </li>
+            <!-- <li>
+               <a href="#">
+                  <ion-icon name="file-tray-stacked-outline"></ion-icon>
+                  <span class="name">History</span>
+               </a>
+            </li> -->
+            <li>
+               <div class="labels">
+                  <a href="/log_out/">
+                     <ion-icon name="log-out-outline"></ion-icon>
+                     <span class="name">Logout</span>
+                  </a>
+               </div>
+            </li>
+         </ul>
+      </div>
+      <div class="Main">
+         <div class="nav">
+            <div class="nav_icon">
+               <ion-icon class="toggle" name="menu-outline"></ion-icon>
+            </div>
+            <div class="name">
+               <span>Hello, Vilas!</span>
+            </div>
+            <div class="user">
+               <img src="{% static 'imgs/Profile2.jpg' %}" alt="V">
+               <!-- <img src="../static/imgs/Profile2.jpg" alt="V"> -->
+            </div>
+         </div>
+         <div class="main">
+            <!-- <div class="cards">
+               <div class="card">
+                  <ion-icon name="bar-chart-outline"></ion-icon>
+                  <span>Graph</span>
+               </div>
+               <a href="#Graph2">
+                  <div class="card">
+                     <ion-icon name="cash-outline"></ion-icon>
+                     <span>Most Profitable</span>
+                  </div>
+               </a>
+               <a href="#Graph3">
+                  <div class="card">
+                     <ion-icon name="pulse-outline"></ion-icon>
+                     <span>Most un-Profitable</span>
+                  </div>
+               </a>
+            </div> -->
+            <div class="content">
+               <!-- {% if image_url %}
+               <div> 
+                  <h1 class="s">My Template</h1>
+                  <img src="{{ image_url }}" alt="My File Link">
+               </div>
+               {% endif %} -->
+               <h1 style="padding: 10px; margin-left:42%;">Analysis</h1>
+               {% if image_url1 %}
+               <div class="container2" id="Graph1">
+                  <img class="left-column" src="{{ image_url1 }}" alt="My File Link">
+                  <div class="right-column">
+                     <br>
+                     <br>
+                     <h1 class="h">{{name1}}</h1>
+                     <br>
+                     <ul>
+                        <li><p>
+                           {{insight1}}
+                        </p></li>
+                        <li><p>
+                           {{insight2}}
+                        </p></li>
+                     </ul>
+                  </div>
+               </div>
+               {% endif %}
+               {% if image_url2 %}
+               <div class="container2" id="Graph2">
+                  <img class="left-column" src="{{ image_url2 }}" alt="My File Link">
+                  <div class="right-column">
+                     <h1 class="a">{{name2}}</h1>
+                     <ul>
+                        <li><p>
+                           {{insight3}}
+                        </p></li>
+                        <li><p>
+                           {{insight4}}
+                        </p></li>
+                        <li><p>
+                           {{insight11}}
+                        </p></li>
+                        <li><p>
+                           {{insight12}}
+                        </p></li>
+                     </ul>
+                  </div>
+               </div>
+               {% endif %}
+               {% if image_url3 %}
+               <div class="container2" id="Graph3">
+                  <img class="left-column" src="{{ image_url3 }}" alt="My File Link">
+                  <div class="right-column">
+                     <h1 class="r">{{name3}}</h1>
+                     <ul>
+                        <li><p>
+                           {{insight5}}
+                        </p></li>
+                        <li><p>
+                           {{insight6}}
+                        </p></li>
+                        <li><p>
+                           {{insight13}}
+                        </p></li>
+                        <li><p>
+                           {{insight14}}
+                        </p></li>
+                     </ul>
+                  </div>
+               </div>
+               {% endif %}
+               {% if image_url4 %}
+               <div class="container2" id="Graph4">
+                  <img class="left-column" src="{{ image_url4 }}" alt="My File Link">
+                  <div class="right-column">
+                     <h1 class="a">{{name4}}</h1>
+                     <ul>
+                        <li><p>
+                           {{insight7}}
+                        </p></li>
+                        <li><p>
+                           {{insight8}}
+                        </p></li>
+                        <li><p>
+                           {{insight15}}
+                        </p></li>
+                        <li><p>
+                           {{insight16}}
+                        </p></li>
+                     </ul>
+                  </div>
+               </div>
+               {% endif %}
+
+               {% if image_url5 %}
+               <div class="container2" id="Graph5">
+                  <img class="left-column" src="{{ image_url5 }}" alt="My File Link">
+                  <div class="right-column">
+                     <h1 class="a">{{name5}}</h1>
+                     <ul>
+                        <li><p>
+                           {{insight17}}
+                        </p></li>
+                        <li><p>
+                           {{insight18}}
+                        </p></li>
+                        <li><p>
+                           {{insight19}}
+                        </p></li>
+                        <li><p>
+                           {{insight20}}
+                        </p></li>
+                     </ul>
+                  </div>
+               </div>
+               {% endif %}
+
+               {% if image_url6 %}
+               <div class="container2" id="Graph6">
+                  <img class="left-column" src="{{ image_url6 }}" alt="My File Link">
+                  <div class="right-column">
+                     <h1 class="a">{{name6}}</h1>
+                     <ul>
+                        <li><p>
+                           {{insight21}}
+                        </p></li>
+                        <li><p>
+                           {{insight22}}
+                        </p></li>
+                        <li><p>
+                           {{insight23}}
+                        </p></li>
+                        <li><p>
+                           {{insight24}}
+                        </p></li>
+                     </ul>
+                  </div>
+               </div>
+               {% else %}
+               <div class="show">
+                  <h3>Please Upload File First</h3>
+               </div>
+               {% endif %}
+               <div>
+                  {% block image %}
+                  {% endblock %}
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="footer">
+         <span>copyrights reserved &copy; 2021 v.1.0 by SUTV</span>
+      </div>
+   </div>
+
+   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+   <script>
+      let toggle = document.querySelector('.toggle');
+      let navigation = document.querySelector('.navigation');
+      let Main = document.querySelector(".Main");
+
+      toggle.onclick = function () {
+         navigation.classList.toggle('active');
+         Main.classList.toggle('active');
+      }
+
+   </script>
+
+</body>
+</html>

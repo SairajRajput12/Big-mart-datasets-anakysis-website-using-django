@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+
+{% block title %}Select Preference{% endblock %}
+
+{% block content1 %}
+  <h1>Enter Your Preference:</h1>
+  {% for message in messages %}
+		<h3 class="error">{{message}}</h3>
+	{% endfor %}
+  <form method="POST" class="pref-form" action="{% url 'preference' %}">
+		{% csrf_token %}
+		<h2>Select the type of analysis you want to perform:</h2>
+
+		<input type="radio" id="store_analysis" name="prefrence" value="store_analysis">
+		<label for="store_analysis">Store analysis</label><br>
+
+		<input type="radio" id="product_analysis" name="prefrence" value="product_analysis">
+		<label for="product_analysis">Product analysis</label>
+
+		<button type="submit" >Next</button>
+	</form>
+
+{% endblock %}

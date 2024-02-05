@@ -1,0 +1,151 @@
+*{
+   padding: 0;
+   margin: 0;
+}
+
+:root{
+   --blue: #287bff;
+   --white: #ffff;
+   --grey: #f5f5f5;
+   --black1: #2222;
+   --black2: #999;
+}
+
+body{
+   width: 100vw;
+   height: 100vh;
+   overflow: hidden;
+}
+
+.display{
+   width: 100vw;
+   max-height: 100vh;
+}
+
+.left_circle{
+   position: relative;
+   display: block;
+   height: 30em;
+   width: 30em;
+   background-color: var(--blue);
+   border-bottom-right-radius: 15em;
+   border-bottom-left-radius: 15em;
+   border-top-right-radius: 15em;
+   margin: -5em -3em;
+   z-index: -3;
+}
+
+.right_circle{
+   position: relative;
+   height: 30em;
+   width: 30em;
+   background-color: var(--blue);
+   left: 54em;
+   top: -154px;
+   border-top-left-radius: 15em;
+   border-bottom-left-radius: 15em;
+   border-top-right-radius: 15em;
+   margin: -3em 0em;
+   z-index: -3;
+}
+
+.container{
+   position: absolute;
+   background-color: var(--white);
+   top: 70px;
+   left: 215px;
+   height: 30em;
+   width: 50em;
+   overflow: hidden;
+   border-radius: 5px;
+   box-shadow: 0px 0px 10px 3px var(--black2);
+
+}
+.container form{
+   display: flex;
+   position: relative;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   top: 30%;
+   z-index: 3;
+   
+}
+.container form input{
+   height: 30px;
+   width: 20em;
+   margin: 10px 0px;
+   padding: 0px 6px;
+   border: none;
+   border-bottom: 2px solid rgb(52, 52, 52);
+   font-size: 15px;
+   opacity: 10px;
+}
+.container form button{
+   height: 30px;
+   width: 20em;
+   margin: 15px 0px;
+   background-color: rgb(0, 129, 168);
+   border: none;
+   border-radius: 4px;
+   color: var(--white);
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-size: 15px;
+}
+.button:hover, 
+.button:focus{
+   outline-offset: 3px;
+}
+
+.circle{
+   position: absolute;
+   background-color: rgb(201, 255, 4);
+   height: 30em;
+   width: 30em;
+   right: -110px;
+   bottom: -110px;
+   border-top-left-radius: 15em;
+   border-top-right-radius: 15em;
+   border-bottom-left-radius: 15em;
+   z-index: 2;
+   filter: blur(5px);
+}
+
+.c1{
+   position: absolute;
+   height: 50px;
+   width: 50px;
+   background-color: var(--blue);
+   border-radius: 25px;
+   filter: blur(5px);
+   left: 30px;
+   top: 0px;
+}
+
+.c2{
+   position: absolute;
+   height: 100px;
+   width: 100px;
+   background-color: rgb(166, 255, 0);
+   border-radius: 50px;
+   filter: blur(10px);
+   left: 30px;
+   top: 10em;
+}
+
+form h3{
+   color: red;
+}
+
+/* *********** Footer **************** */
+.footer{
+   position: absolute;
+   bottom: 0px;
+   background-color: var(--blue);
+   width: 100%;
+   padding: 5px 500px;
+}
+.footer span{
+   color: var(--white);
+   font-family: 'Consolas';
+}

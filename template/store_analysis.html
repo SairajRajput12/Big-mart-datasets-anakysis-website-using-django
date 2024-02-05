@@ -1,0 +1,44 @@
+{% extends 'home.html' %}
+{% block title %} Store Analysis{% endblock %}
+
+
+{% block content2 %}
+<form method="POST" class="pref-form prod-form" {% if name %} action="{% url 'store_analysis' name=name %}"{% endif %} enctype="multipart/form-data">
+    {% csrf_token %}
+    <h2 style="position: absolute; margin-left: 250px;">Upload file</h2>
+    <div class="file_up">
+       <input type="file" name="myFile" id="file" required>
+    </div>
+
+    <div class="i1">
+       <label for="product_type">Enter Store Name:</label>
+       <input class="Input" type="text" id="product_type" name="store_name" required>
+    </div>
+    <div class="i2">
+       <label for="year">Enter Year:</label>
+       <input class="Input" type="number" id="year" name="store_year" required>
+    </div>
+    
+    <button type="submit" id="btn" value="Submit">Submit</button>
+</form>
+
+
+  {% block content3 %}
+    {% if name == 'sales_of_each_product' %}
+    <p>Sales of each store</p>
+    
+
+    {% elif name == 'store_location_analysis' %}
+    <p>Store location analysis</p>
+    
+    {% elif name == 'source_contribution' %}
+    <p>Source contribution</p>   
+    
+    {% elif name == 'product_sold_by_given_store' %}
+    <p>Product sold by given store</p>
+    
+  {% endif %}
+  {% endblock %}
+{% endblock %}
+
+

@@ -1,0 +1,326 @@
+*{
+   padding: 0;
+   margin: 0;
+}
+:root{
+   --blue: #287bff;
+   --white: #ffff;
+   --grey: #f5f5f5;
+   --black1: #2222;
+   --black2: #999;
+}
+body{
+   width: 100vw;
+   height: 100vh;
+   overflow-x: hidden;
+   font-family: 'Ubuntu', sans-serif;
+   scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+   display: none;
+}
+
+.container{
+   width: 100%;
+   height: 100%;
+}
+
+/* Navigation */
+.navigation{
+   position: fixed;
+   background-color: var(--blue);
+   height: 100%;
+   width: 225px;
+   top: 0;
+   display: block;
+   border-left: 5px solid var(--blue);
+   border-right: 5px solid var(--blue);
+   font-family: 'Ubuntu', sans-serif;
+   transition: 0.3s;
+}  
+
+.navigation.active {
+   width: 80px;
+}
+
+.navigation ul{
+   list-style: none;
+   padding: 0px 15px;
+   margin-top: -16px;
+}
+.navigation ul li{
+   margin: 45px 10px;
+   /* transition: 0.2s; */
+}
+
+.navigation.active ul li {
+   margin: 45px 10px;
+}
+
+.navigation .title {
+   font-family: 'Ubuntu', sans-serif;
+   text-decoration: none;
+   color: var(--white);
+   font-size: large;
+   position: fixed;
+   margin: 15px 15px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.navigation .title span{
+   padding: 0px 15px;
+}
+
+.title box-icon{
+   filter: invert(1);
+   display: inline-block;
+   width: 40px;
+   height: 40px;
+   transition: 0.2s;
+}
+.navigation.active .title box-icon{
+   size: 50px;
+   transform: rotate(360deg);
+   margin-left: 8px;
+}
+
+.navigation.active .title span{
+   color: transparent;
+}
+
+.navigation ul li:nth-child(1){
+   margin-top: 98px;
+}
+
+.navigation ul li a{
+   text-decoration: none;
+   color: var(--white);
+   height: 45px;
+   width: 185px;
+   padding: 0px 10px;
+   width: 205px;
+   display: flex;
+   align-items: center;
+   /* transition: 0.2s; */
+}
+
+.navigation.active ul li a span{
+   color: transparent;
+}
+
+.navigation ul li:hover a{
+   background-color: var(--white);
+   color: var(--blue);
+   border-top-left-radius: 23px;
+   border-bottom-left-radius: 23px;
+}
+
+.navigation ul li:nth-child(2) a{
+   background-color: var(--white);
+   color: var(--blue);
+   border-top-left-radius: 23px;
+   border-bottom-left-radius: 23px;
+}
+.navigation ul li:hover a::before,
+.navigation ul li:nth-child(2) a::before{
+   content: '';
+   position: absolute;
+   right: -5px;
+   /* top: 0px; */
+   margin-top: -40%;
+   width: 45px;
+   height: 45px;
+   background-color: var(--blue);
+   border-radius: 50%;
+   box-shadow: 32px 32px 0 15px var(--white);
+   transition: 0.3s;
+}
+
+.navigation ul li:hover a::after,
+.navigation ul li:nth-child(2) a::after{
+   content: '';
+   position: absolute;
+   right: -5px;
+   /* top: 0px; */
+   margin-top: 40%;
+   width: 45px;
+   height: 45px;
+   background-color: var(--blue);
+   border-radius: 50%;
+   box-shadow: 32px -32px 0 15px var(--white);
+   transition: 0.3s;
+}
+
+.navigation.active ul li:hover a::before,
+   .navigation.active ul li:nth-child(2) a::before {
+      content: '';
+      position: absolute;
+      right: -5px;
+      /* top: 0px; */
+      margin-top: -112%;
+      width: 45px;
+      height: 45px;
+      background-color: var(--blue);
+      border-radius: 50%;
+      box-shadow: 32px 32px 0 15px var(--white);
+      z-index: -1;
+   }
+
+   .navigation.active ul li:hover a::after,
+   .navigation.active ul li:nth-child(2) a::after {
+      content: '';
+      position: absolute;
+      right: -5px;
+      /* top: 0px; */
+      margin-top: 112%;
+      width: 45px;
+      height: 45px;
+      background-color: var(--blue);
+      border-radius: 50%;
+      box-shadow: 32px -32px 0 15px var(--white);
+      z-index: -1;
+   }
+
+
+.navigation ul li a ion-icon{
+   margin-right: 15px;
+   font-size: 25px;
+}
+
+
+/* Main */
+.Main{
+   transition: 0.4s;
+}
+
+.Main.active{
+   margin-left: -76px;
+}
+
+
+/* Navbar */
+.nav{
+   position: relative;
+   top: 0;
+   width: 81%;
+   margin-left: 239px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px;
+   background-color: var(--white);
+   /* box-shadow: 2px 2px 4px var(--black1); */
+   box-shadow: 0 7px 25px rgba(0,0,0, 0.08);
+   z-index: 1;
+}
+.nav .nav_icon{
+   /* position: absolute; */
+   font-size: 30px;
+   height: 28px;
+}
+
+
+.user img{
+   width: 35px;
+   position: absolute;
+   border-radius: 20px;
+   right: 45px;
+   top: 5px;
+   transition: 0.2s;
+}
+
+.user img:hover{
+   transform: scale(1.3);
+}
+
+/* Main */
+.main{
+   position: relative;
+   display: flex;
+   margin-left: 239px;
+   min-height: 85vh;
+   width: 83vw;
+   height: 95%;
+   padding: 0;
+   margin: 0;
+   margin-top: 16px;
+   left: 236px;
+   flex-direction: column;
+}
+
+
+.cards{
+   display: flex;
+   justify-content: space-evenly;
+   margin-top: 20px;
+}
+.cards .card{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 84px;
+   width: 268px;
+   border-radius: 20px;
+   background-color: var(--white);
+   /* box-shadow: 3px 3px 7px 4px var(--black1); */
+   box-shadow: 0 7px 25px rgba(0,0,0, 0.08);
+   transition: 0.3s;
+}
+
+.cards .card:hover{
+   background-color: var(--blue);
+   color: var(--white);
+   box-shadow: 2px 2px 5px 4px var(--black1);
+}
+
+.card ion-icon{
+   margin: 0px 10px;
+   font-size: 30px;
+}
+
+.content{
+   position: relative;
+   width: 77vw;
+   margin-left: 30px;
+   /* box-shadow: 0px -3px 4px var(--black1); */
+   box-shadow: 0 -3px 25px rgba(0,0,0, 0.08);
+   margin-top: 30px;
+   border-radius: 20px;
+}
+
+/************************ Graphs **********************/
+.container2{
+   display: flex;
+   margin: 10px;
+}
+.container2 img{
+   margin: 10px;
+   width: 599px;
+   size: 277%;
+   height: auto;
+}
+.right-column ul li{
+   padding: 15px 0px;
+}
+
+.show{
+   position: absolute;
+   z-index: -1;
+   margin-top: 10px;
+   margin-left: 39%;
+   color: rgb(139, 0, 0);
+}
+
+/* *********** Footer **************** */
+.footer{
+   position: relative;
+   bottom: 0px;
+   background-color: var(--blue);
+   width: 100%;
+   padding: 5px 300px;
+}
+.footer span{
+   color: var(--white);
+   font-family: 'Consolas';
+}

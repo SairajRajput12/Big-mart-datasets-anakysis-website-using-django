@@ -1,0 +1,33 @@
+{% extends 'home.html' %}
+
+{% block title %} Product Analysis{% endblock %}
+
+{% block content2 %}
+<form method="POST" class="pref-form prod-form" {% if name %} action="{% url 'product_analysis' name=name %}"{% endif %} enctype="multipart/form-data">
+      {% csrf_token %}
+   <h2 style="position: absolute; margin-left: 250px;">Upload file</h2>
+
+   <div class="file_up">
+      <input type="file" name="myFile" id="file" required>
+   </div>
+
+   <div class="i1">
+      <label for="product_type">Enter Product Type:</label>
+      <input class="Input" type="text" id="product_type" name="product_type" required>
+   </div>
+   <div class="i2">
+      <label for="year">Enter Year:</label>
+      <input class="Input" type="number" id="year" name="year" required>
+   </div>
+   <div class="i3">
+      <label for="x_axis">Enter X-Axis:</label>
+      <input class="Input" type="text" id="x_axis" name="x_axis" required>
+   </div>
+   <div class="i4">
+      <label for="y_axis">Enter Y-Axis:</label>
+      <input class="Input" type="text" id="y_axis" name="y_axis" required>
+   </div>
+   
+   <button type="submit" id="btn" value="Submit">Submit</button>
+</form>
+{% endblock %}

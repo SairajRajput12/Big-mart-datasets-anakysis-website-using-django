@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- {% load static %} -->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Give Feedback</title>
+   <link rel="stylesheet" href="{% static 'css/feedback.css' %}">
+   <!-- <link rel="stylesheet" href="../static/css/Analysis.css"> -->
+</head>
+<body>
+   <div class="container">
+      <div class="navigation">
+         <a class="title" href="#">
+            <box-icon type='solid' name='analyse'></box-icon>
+            <span class="name">MS Analysis</span>
+         </a>
+            <ul>
+               <li>
+                  <a href="/preference/">
+                     <ion-icon name="home-outline"></ion-icon>
+                     <span class="name">Home</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="/Analysis/">
+                     <ion-icon name="analytics-outline"></ion-icon>
+                     <span class="name">Analysis</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     <ion-icon name="chatbox-outline"></ion-icon>
+                     <span class="name">Feedback</span>
+                  </a>
+               </li>
+               <li>
+                  <div class="labels">
+                     <a href="/log_out/">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                        <span class="name">Logout</span>
+                     </a>
+                  </div>
+               </li>
+            </ul>
+      </div>
+      <div class="Main">
+         <div class="nav">
+            <div class="nav_icon">
+               <ion-icon class="toggle" name="menu-outline"></ion-icon>
+            </div>
+            <div class="name">
+               <span>Hello, Vilas!</span>
+            </div>
+            <div class="user">
+               <img src="{% static 'imgs/Profile2.jpg' %}" alt="V">
+               <!-- <img src="../static/imgs/Profile2.jpg" alt="V"> -->
+            </div>
+         </div>
+
+         <div class="main">
+            <h2>Give Feedback</h2>
+            <form action="#" class="form">
+               <div class="Names">
+                  <input type="text" name="fname" placeholder="First Name">
+                  <input type="text" name="lname" placeholder="Last Name">
+               </div>
+               <div class="contacts">
+                  <input type="email" name="email" id="" placeholder="Email">
+                  <input type="number" name="mobile" placeholder="Mobile Number">
+               </div>
+               <div class="text-area">
+                  <textarea style="padding: 4px;" placeholder="Write a Feedback...." name="msg" id="msg" cols="80" rows="15"></textarea>
+               </div>
+               <button type="submit" class="button" value="submit">Submit</button>
+            </form>
+         </div>
+         <div class="footer">
+            <span>copyrights reserved &copy; 2021 v.1.0 by SUTV</span>
+         </div>
+      </div>
+   </div>
+
+   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+   
+   <script>
+      let toggle = document.querySelector('.toggle');
+      let navigation = document.querySelector('.navigation');
+      let Main = document.querySelector(".Main");
+
+      toggle.onclick = function(){
+         navigation.classList.toggle('active');
+         Main.classList.toggle('active');
+      }
+
+   </script>
+
+</body>
+</html>
